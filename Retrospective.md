@@ -1,7 +1,7 @@
 # Retrospective
 
-- name: Jane Doe
-- email: janedoe@u.boisestate.edu
+- name: Jacob Swierstra
+- email: JacobSwierstra@u.boisestate.edu
 
 ## Instructions
 
@@ -21,6 +21,9 @@ Be safe CITE!
 
 ## Experience
 
+- Were there any things that you struggled with? 
+- Were there any parts of this lab that were unclear or poorly specified? 
+- Were you able to get the entire project done?
 TODO
 
 ## Known issues or Bugs
