@@ -5,7 +5,7 @@ html {
 }
 img{
    margin-top: 25px;
-   width: 350%;
+   width: 50%;
 }
 
 .ImageTitle{
@@ -17,13 +17,14 @@ img{
 .IT{
    margin-right: 50px;
    margin-left: 50px;
+   text-align: center;
 }
 
 h1{
    margin-top: 75px;
    font-size: 27.5px;
    color: #FFFFFF;
-   text-align: center;
+   text-align: left;
 }
 
 h2{
@@ -82,53 +83,13 @@ article {
    margin-bottom: 20px;
 }
 
-
-.side_left {
-   position:sticky;
-   padding-top: 1%;
-   font-size: 15px;
-   text-align: left;
-   margin-top: 1.5%;
-   background-color: rgba(126, 208, 255, 0.404);
-   margin-left: 5px;
-   margin-right: 5px;
-   padding-right: 5px;
-   padding-left: 5px;
-   inline-size: 150px; 
-   max-height: 500px;
-   position: sticky;
-   top: 50px;
-   z-index: 999;
-}
-
-.stext_left {
-   color: yellow;
-}
-
-.left_list li{
-   margin-left: -22.5px;
-   list-style: none;
-   margin-top: 20px;
-}
-
-
-.stext_left a{
-   color: yellow;
-   text-decoration: none;
-}
-
-.stext_left a:hover{
-   color: hotpink;
-   text-decoration: underline;
-}
-
 .side_right {
    max-height: 500px;
    position:sticky;
-   padding-top: 1%;
+   padding-top: 2%;
    font-size: 15px;
    text-align: right;
-   margin-top: 1.5%;
+   margin-top: 2%;
    background-color: rgba(126, 208, 255, 0.404);
    margin-left: 5px;
    margin-right: 5px;
@@ -181,7 +142,7 @@ article {
    color: black;
    font-size: 17px;
    text-align: center;
-   padding: 10px;
+   padding: 15px;
    margin: -10px;
 }
 
@@ -194,3 +155,29 @@ article {
    position: absolute;
    margin: -120px 0 0;
 }
+
+.listBlogs{
+   margin-left: -40px;
+   text-align: left;
+}
+
+.usrEnter{
+   background-color: #FFFFFF;
+   color: #00000086;
+}
+
+.blogs td{
+   list-style: none;
+
+}
+
+.blogs li{
+   position: relative;
+ }
+.blogs li:not(:last-child):after{
+   content:"";
+   display: block;
+   margin: 3em 0;
+   border-bottom: solid blue;
+   width: 30px;
+ }

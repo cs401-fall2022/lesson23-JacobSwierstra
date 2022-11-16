@@ -1,8 +1,183 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+html {
+   background-color: #161616;
+   font-family:Arial, Helvetica, sans-serif;
+   
+}
+img{
+   margin-top: 25px;
+   width: 50%;
 }
 
-a {
-  color: #00B7FF;
+.ImageTitle{
+   display: grid;
+   margin-right: 30px;
+   margin-left: 30px;
+   grid-template-columns: auto auto;
+}
+.IT{
+   margin-right: 50px;
+   margin-left: 50px;
+   text-align: center;
+}
+
+h1{
+   margin-top: 75px;
+   font-size: 27.5px;
+   color: #FFFFFF;
+   text-align: left;
+}
+
+h2{
+    font-size: 18px;
+    color: #FFFFFF;
+    text-align: left;
+ }
+
+.container{
+   text-align: center;
+   margin: 5px;
+   font-size: 13px;
+}
+
+.codediv {
+   background-color: black;
+   margin: 15px;
+   width: fit-content;
+   padding: 15px;
+   color: blue;
+}
+
+.line {
+   color: red;
+}
+
+code {
+   background-color: #2600ff36;
+}
+
+.grid_Layout{
+   display: grid;
+   grid-template-columns: auto auto auto;
+}
+
+article {
+   background-color: #3a3a3a;
+   color: #FFFFFF;
+   font-size: 14px;
+   text-align: left;
+   padding-left: 2.5%;
+   padding-right: 2.5%;
+   padding-top: 1%;
+   padding-bottom: 2%;
+   margin-left: 2%;
+   margin-right: 2%;
+   margin-top: 1.5%;
+   margin-bottom: 3%;
+}
+
+.sideHead{
+   text-align: center;
+   font-size: 20px;
+   padding-left: 4px;
+   padding-right: 4px;
+   margin-bottom: 20px;
+}
+
+.side_right {
+   max-height: 500px;
+   position:sticky;
+   padding-top: 2%;
+   font-size: 15px;
+   text-align: right;
+   margin-top: 2%;
+   background-color: rgba(126, 208, 255, 0.404);
+   margin-left: 5px;
+   margin-right: 5px;
+   padding-right: 5px;
+   padding-left: 5px;
+   inline-size: 150px; 
+   position: sticky;
+   top: 50px;
+   z-index: 999;
+}
+
+.stext_right {
+   color: yellow;
+   text-align: left;
+}
+
+.right_list li{
+   list-style: none;
+   margin-left: -40px;
+   text-align: left;
+   margin-top: 17.5px;
+}
+
+.stext_right a{
+   color: yellow;
+   text-decoration: none;
+   margin-top: 20px;
+}
+
+.stext_right a:hover{
+   color: hotpink;
+   text-decoration: underline;
+}
+
+.head a{
+   color: black;
+   text-decoration: none;
+}
+
+.head a:hover{
+   color: hotpink;
+   text-decoration: underline;
+}
+
+.head {
+   position: sticky;
+   top: 0;
+   z-index: 999;
+   background-color: #FFFFFF;
+   color: black;
+   font-size: 17px;
+   text-align: center;
+   padding: 15px;
+   margin: -10px;
+}
+
+.jump{
+   position: absolute;
+   margin: -50px 0 0;
+}
+
+.jumptop{
+   position: absolute;
+   margin: -120px 0 0;
+}
+
+.listBlogs{
+   margin-left: -40px;
+   text-align: left;
+}
+
+.blogs tr{
+   list-style: none;
+   content:"";
+   display: block;
+   margin: 3em 0;
+   border-bottom: solid blue;
+   width: 30px;
+   position: relative;
+   opacity: 10%;
+}
+
+.blogs td{
+   list-style: none;
+   content:"";
+   display: block;
+   margin: 3em 0;
+   border-bottom: solid blue;
+   width: 30px;
+   position: relative;
 }

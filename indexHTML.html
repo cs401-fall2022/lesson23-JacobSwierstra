@@ -6,54 +6,59 @@
         <title>Swierstra's Blog</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="/css/style.css">
+        <link rel="stylesheet" href="/stylesheets/style.css">
     </head>
     <body>
         <a class="jumptop" id="TOP"></a>
-        <div class = "head"><a href="#TOP">Top of this Page</a></div>
+        <div class = "head"><a href="#TOP">Swierstra's Blog</a></div>
         <div class = "grid_Layout">
             <article>
                 <div class = "ImageTitle">
-                    <div class = "IT"><img src="/images/HeadShot.png"></div>
+                    <div class = "IT"><img src="images/HeadShot.png"></div>
                         <div class = "IT"><h1>Welcome to  Swierstra's blog</h1></div>
                 </div>
-                <ul>
+                <hr>
+                <ul class ="blogs">
                     {% for txt in data%}
                     <ul>{{txt.blog_id}} - {{txt.blog_txt}}  </ul>
                     {% endfor%}
                 </ul>
-
                 <hr>
-                <h2>Add stuff</h2>
+                <h2>Add a blog Here</h2>
                 <form action="/add" method="POST">
                     <div>
                         <label for="blog">What is your blog txt?</label>
-                        <input name="blog" id="blog" value="Hi this is my blog text!" />
+                        <input class="usrEnter" name="blog" id="blog" value="ENTER BLOG TEXT HERE!" />
                     </div>
                     <div>
-                        <button>Send my blog</button>
+                        <button>Enter new blog entry</button>
                     </div>
                 </form>
                 <hr>
                 <h2>Delete stuff</h2>
                         <form action="/delete" method="POST">
-                    <div>
+                    <div >
                         <label for="blog">Blog to delete?</label>
-                        <input name="blog" id="blog" value="1" />
+                        <input class="usrEnter" name="blog" id="blog" value="Enter blogs number here" />
                     </div>
                     <div>
-                        <button>delete my blog</button>
+                        <button>Delete blog entry</button>
                     </div>
                 </form>
             </article>
         <div class = "side_right">
             <div class = "stext_right">
-                <p class = "sideHead">What is on this Page?</p>
+                <p class = "sideHead">Navigation of this Page</p>
                 <ul class = "right_list"> 
                     <li><a href="#TOP">Top of this Page</a></li>
-                    <li><a href="#Types_by_Inference">Types by Inference</a></li>
-                    <li><a href="#Defining_Types">Defining Types</a></li>
-                    <li><a href="#Structural_Type_System">Structural Type System</a></li>
+                    <ul class = "listBlogs">
+                        <li><a href="#BLOGS_HERE">Blogs will be listed here</a></li>
+                        <li>
+                            {{txt.blog_id}} - {{txt.blog_txt}}
+                        </li>
+                    </ul>
+                    <li><a href="#ADD">Add a blog</a></li>
+                    <li><a href="#DELETE">Add a blog</a></li>
                 </ul>
             </div>
         </div>

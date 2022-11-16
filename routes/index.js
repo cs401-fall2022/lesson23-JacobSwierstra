@@ -75,25 +75,17 @@ router.post('/delete', (req, res, next) => {
         console.log("Getting error " + err);
         exit(1);
       }
-      console.log("inserting " + req.body.blog);
       let result = testInfo(req.body.blog);
-      db.exec(`insert into blog ( blog_txt) values ('${result}');`)
       db.exec(`delete from blog where blog_id='${result}';`);     
+      
+      db.all(`select MAX(blog_id) from blog;`,
+        (err, rows) => {
+          console.log(rows[0].name);
+        });
+
       res.redirect('/');
     }
   );
-})
-
-router.post('/', (req, res) => {
-  res.send('Got a POST request')
-})
-
-router.put('/user', (req, res) => {
-  res.send('Got a PUT request at /user')
-})
-
-router.delete('/user', (req, res) => {
-  res.send('Got a DELETE request at /user')
 })
 
 module.exports = router;
