@@ -77,12 +77,35 @@ router.post('/delete', (req, res, next) => {
       }
       let result = testInfo(req.body.blog);
       db.exec(`delete from blog where blog_id='${result}';`);     
-      
+      /* trying to reset the blog number so it stays at the next lowest entry
       db.all(`select MAX(blog_id) from blog;`,
         (err, rows) => {
           console.log(rows[0].name);
         });
+      */
+      res.redirect('/');
+    }
+  );
+})
 
+router.post('/update', (req, res, next) => {
+  var db = new sqlite3.Database('mydb.sqlite3', sqlite3.OPEN_READWRITE | sqlite3.OPEN_CREATE,
+    (err) => {
+      if (err) {
+        console.log("Getting error " + err);
+        exit(1);
+      }
+      let result = testInfo(req.body.blog);
+      let result2 = testInfo(req.body.blogCon);
+      console.log("Updating Blog " + result +" with "+ result2);
+      let copy = parseInt(result);
+      copy = copy/copy;
+      if(copy != 1){
+        console.log("NOT A NUMBER");
+      } else {
+        db.exec(`UPDATE blog SET blog_txt = '${result2}' WHERE blog_id='${result}'`);
+      }      
+      //redirect to homepage
       res.redirect('/');
     }
   );

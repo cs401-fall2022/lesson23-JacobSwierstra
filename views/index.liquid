@@ -30,25 +30,45 @@
           {% endfor%}
         </ul>
         <hr>
+        <a class="jump" id="ADD"></a>
         <h2>Add a blog here</h2>
         <form action="/add" method="POST">
           <div>
             <label for="blog">What is your blog txt?</label>
             <input name="blog" id="blog" value="ENTER BLOG TEXT HERE!"/>
           </div>
+          <p></p>
           <div>
             <button>Enter new blog entry</button>
           </div>
         </form>
         <hr>
+        <a class="jump" id="DELETE"></a>
         <h2>Delete blog here</h2>
         <form action="/delete" method="POST">
           <div>
             <label for="blog">Blog to delete?</label>
             <input name="blog" id="blog" value="Enter blogs number here"/>
           </div>
+          <p></p>
           <div>
             <button>Delete blog entry</button>
+          </div>
+        </form>
+        <hr>
+        <a class="jump" id="UPDATE"></a>
+        <h2>Update a blog here</h2>
+        <form action="/update" method="POST">
+          <div>
+            <label for="blog">Blog to update</label>
+            <input name="blog" id="blog" value="Enter blogs number here"/>
+            <p></p>
+            <label for="blogCon">New Blog contents</label>
+            <input name="blogCon" id="blogCon" value="Enter change to blog here"/>
+          </div>
+          <p></p>
+          <div>
+            <button>Update blog entry</button>
           </div>
         </form>
       </article>
@@ -63,9 +83,6 @@
               <li>
                 <a href="#BLOGS_HERE">Blogs will be listed here</a>
               </li>
-              <li>
-                {{txt.blog_id}} - {{txt.blog_txt}}
-              </li>
             </ul>
             <li>
               <a href="#ADD">Add a blog</a>
@@ -73,6 +90,9 @@
             <li>
               <a href="#DELETE">Add a blog</a>
             </li>
+            <li>
+                <a href="#UPDATE">Update blog</a>
+              </li>
           </ul>
         </div>
       </div>
