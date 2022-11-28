@@ -77,12 +77,13 @@ router.post('/delete', (req, res, next) => {
       }
       let result = testInfo(req.body.blog);
       db.exec(`delete from blog where blog_id='${result}';`);     
-      /* trying to reset the blog number so it stays at the next lowest entry
-      db.all(`select MAX(blog_id) from blog;`,
-        (err, rows) => {
-          console.log(rows[0].name);
-        });
-      */
+      console.log("DELETED "+result);
+      db.all(`select (blog_id) from blog;`,function (err, result, fields) {
+        if (err) throw err;
+        let largest = result[result.length - 1].blog_id;
+        largest.toString();
+        db.exec(`UPDATE "main"."sqlite_sequence" SET seq='${largest}' WHERE _rowid_='1';`);
+      });
       res.redirect('/');
     }
   );

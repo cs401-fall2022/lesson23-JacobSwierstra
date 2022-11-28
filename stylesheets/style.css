@@ -174,10 +174,17 @@ article {
 .blogs li{
    position: relative;
  }
-.blogs li:not(:last-child):after{
+
+ .blogs li:not(:last-child):after{
    content:"";
    display: block;
    margin: 3em 0;
    border-bottom: solid blue;
    width: 30px;
+ }
+
+ .data li{
+   border-bottom: solid #bb1313;
+   list-style: none;
+   margin-bottom: 10px;
  }

@@ -22,12 +22,17 @@
           </div>
         </div>
         <hr>
+        <div class="topborder">List of blogs are below</div>
         <ul class="blogs">
-          {% for txt in data%}
-            <ul class="blogs">
-              {{txt.blog_id}} - {{txt.blog_txt}}
-            </ul>
-          {% endfor%}
+          <li class="data">
+            {% for txt in data%}
+              {% assign idNum = txt.blog_id %}
+              <a class="jump" id="{{idNum}}"></a>
+              <ul class="data">
+                {{txt.blog_id}} - {{txt.blog_txt}}
+              </ul>
+            {% endfor%}
+          </li>
         </ul>
         <hr>
         <a class="jump" id="ADD"></a>
@@ -81,17 +86,27 @@
             </li>
             <ul class="listBlogs">
               <li>
-                <a href="#BLOGS_HERE">Blogs will be listed here</a>
+                <div>Click the number of which blog you want to visit below</div>
+                <ul class="blogs">
+                  <li class="dataside">
+                    {% for txt in data%}
+                      {% assign idNum = txt.blog_id %}
+                      <ul class="dataside">
+                        <a href="#{{idNum}}">{{txt.blog_id}}</a>
+                      </ul>
+                    {% endfor%}
+                  </li>
+                </ul>
               </li>
             </ul>
             <li>
               <a href="#ADD">Add a blog</a>
             </li>
             <li>
-              <a href="#DELETE">Add a blog</a>
+              <a href="#DELETE">Delete a blog</a>
             </li>
             <li>
-                <a href="#UPDATE">Update blog</a>
+                <a href="#UPDATE">Update a blog</a>
               </li>
           </ul>
         </div>
