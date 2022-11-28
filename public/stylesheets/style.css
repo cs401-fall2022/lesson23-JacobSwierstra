@@ -185,8 +185,9 @@ article {
 .data {
    list-style: none; 
 }
+
+
 .topborder{
-   border-top: solid blue;
    margin-left: 40px;
    padding-top: 5px;
    text-align: center;
@@ -211,4 +212,16 @@ article {
    margin-top: 5px;
    margin-left: -20px;
    text-align: left;
+}
+
+.space{
+   text-align: center;
+   font-size: 30px;
+   color: rgb(252, 9, 9);
+   margin-top: 1000px;
+}
+.contact{
+   text-align: center;
+   font-size: 10px;
+   color: rgb(252, 9, 199);
 }
